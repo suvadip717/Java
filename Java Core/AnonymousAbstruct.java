@@ -1,14 +1,17 @@
-abstract class A{
+abstract class A {
   public abstract void show();
+
   public abstract void config();
 }
+
 public class AnonymousAbstruct {
-  public static void main(String args[]){
+  public static void main(String args[]) {
     A obj = new A() {
-      public void show(){
+      public void show() {
         System.out.println("In a new show");
       }
-      public void config(){
+
+      public void config() {
         System.out.println("In a config");
       }
     };
