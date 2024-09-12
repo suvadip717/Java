@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="com.springcore.SpringCore.ci.Person" name="person">
+		<constructor-arg value="Durgesh" type="String"/>
+		<constructor-arg value="231"/>	
+		<constructor-arg ref="certificate"/>
+	</bean>
+	<!-- 
+	<bean class="com.springcore.SpringCore.ci.Certificate" name="certificate" c:name="Python" c:Duration="3 Monthes"/>
+	-->
+	
+	<bean class="com.springcore.SpringCore.ci.Certificate" name="certificate">
+		<constructor-arg value="Python" type="String" index="0"/>
+		<constructor-arg value="2 Monthes" type="String" index="1"/>
+	</bean>
+	
+	
+	<bean class="com.springcore.SpringCore.ci.Adition" name="add">
+		<constructor-arg value="12" type="int" index="1"/>
+		<constructor-arg value="27" type="int" index="0"/>
+	</bean>
+</beans>
